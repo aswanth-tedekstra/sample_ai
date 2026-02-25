@@ -1,0 +1,26 @@
+[project]
+name = "fastapi-langgraph"
+version = "0.1.0"
+description = "FastAPI app with a LangGraph-based agent (dummy backend)"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+
+dependencies = [
+  "fastapi>=0.110",
+  "uvicorn[standard]>=0.30",
+  "langgraph>=0.2",
+  "langchain-core>=0.2",
+  "openai>=1.50",
+]
+
+[project.optional-dependencies]
+dev = [
+  "ruff>=0.5",
+]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
