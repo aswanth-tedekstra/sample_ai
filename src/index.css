@@ -1,0 +1,126 @@
+:root {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: #1f2a2e;
+  background-color: #f4f1ea;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top, #fbf7ef, #efe9de 60%, #e4dccf);
+}
+
+#root {
+  width: min(720px, 92vw);
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hud {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.hud-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.hud-score {
+  font-size: 1rem;
+}
+
+.hud-controls {
+  display: flex;
+  gap: 8px;
+}
+
+button {
+  border: 1px solid #b8b0a3;
+  background: #fffaf1;
+  color: inherit;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:hover {
+  background: #f6efe2;
+}
+
+.board {
+  display: grid;
+  aspect-ratio: 1 / 1;
+  border: 2px solid #b8b0a3;
+  background: #fbf7ef;
+}
+
+.cell {
+  border: 1px solid #efe7da;
+  background: #fdf9f1;
+}
+
+.cell.snake {
+  background: #2b5b48;
+}
+
+.cell.food {
+  background: #c14f2a;
+}
+
+.status {
+  display: flex;
+  justify-content: center;
+}
+
+.status-card {
+  padding: 8px 16px;
+  background: #1f2a2e;
+  color: #fdf9f1;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.controls {
+  display: grid;
+  gap: 8px;
+  justify-items: center;
+}
+
+.controls-row {
+  display: flex;
+  gap: 8px;
+}
+
+.controls-hint {
+  font-size: 0.9rem;
+  color: #49575c;
+}
+
+@media (max-width: 600px) {
+  .hud {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hud-controls {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
